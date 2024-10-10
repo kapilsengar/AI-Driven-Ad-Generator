@@ -7,7 +7,7 @@ const generateContent= async (req, res) => {
   const { prompt } = req.body;
 
   try {
-    const API_KEY = "AIzaSyCaQeB5BEIsxBbjt7V21qtYqbb6Wq0Cqkg";
+    const API_KEY =OPENAI_API_KEY;
     
     const genAI = new GoogleGenerativeAI(API_KEY);
     const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
