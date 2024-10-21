@@ -1,7 +1,5 @@
-import React from 'react';
 import Dashboard from './components/Dashboard';
 import {Routes,Route} from 'react-router-dom';
-import Card1 from './components/cards/Card1'
 const App = () => {
   return (
     <>
@@ -9,7 +7,6 @@ const App = () => {
       
       <Routes>
         <Route path='/' element={<Dashboard />}/>
-        <Route path='/card1' element={<Card1/>}/>
       </Routes>
     </>
   );
