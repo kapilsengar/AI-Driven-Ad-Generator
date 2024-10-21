@@ -21,6 +21,9 @@ function SignIn() {
 				data: credentials,
 			});
 			if (response.data.success) {
+				console.log(response);
+				
+				localStorage.setItem("userData",response?.data?.data);
 				navigate("/");
 			}
 			setLoading(false);
