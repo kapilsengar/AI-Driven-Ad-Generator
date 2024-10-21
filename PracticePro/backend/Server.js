@@ -19,7 +19,8 @@ connectDB();
 app.use(morgan("dev"));
 
 // Middleware for JSON parsing and enabling CORS
-app.use(cors());
+app.use(cors({ origin: ["http://localhost:5173"], credentials: true })); //Third-party middleware
+
 app.use(express.json()); // Built-in middleware
 app.use(cookieParser()); // Third-party middleware
 

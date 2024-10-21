@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 import Newscard from "./Newscard";
 import { useData } from "../context/DataProvider";
+import Navbar from "./navbar/Navbar";
 
 const Dashboard = () => {
 	const [prompt, setPrompt] = useState("");
@@ -34,21 +35,23 @@ const Dashboard = () => {
 
 	return (
 		<>
-			<div className="flex">
-				<input
-					type="text"
-					placeholder=" Enter a prompt "
-					value={prompt}
-					onChange={(e) => setPrompt(e.target.value)}
-					className="w-full h-10 outline-none border-2 border-blue-500 m-2 rounded-lg"
-				/>
-				<button
-					onClick={handleSubmit}
-					className="w-30 h-10 bg-blue-700 py-2 mt-2  mr-2 rounded-lg text-white px-3">
-					generate
-				</button>
+		<Navbar/>
+			<div className="flex w-[70%] ml-[15%] mb-5">
+				<div className="flex w-full">
+					<input
+						type="text"
+						placeholder=" Enter a prompt "
+						value={prompt}
+						onChange={(e) => setPrompt(e.target.value)}
+						className="w-full h-10 outline-none border-2 border-blue-500 m-2 rounded-lg"
+					/>
+					<button
+						onClick={handleSubmit}
+						className="w-30 h-10 bg-blue-700 py-2 mt-2  mr-2 rounded-lg text-white px-3">
+						generate
+					</button>
+				</div>
 			</div>
-
 			<Newscard props={content} />
 		</>
 	);

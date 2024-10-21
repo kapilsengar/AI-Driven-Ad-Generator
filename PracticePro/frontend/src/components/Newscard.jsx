@@ -13,15 +13,12 @@ const Newscard = ({ props }) => {
 
 	const navigate = useNavigate();
 
-	const handlecard1 = (args) => {
-		console.log(args);
-	};
 	const dummy =
 		"Lorem ipsum dolor sit amet consectetur, adipisicing elit. Commodi corrupti unde libero dicta dolores, quo adipisci natus numquam eius, nostrum tempore. Placeat libero delectus aliquam quaerat ducimus sed laudantium consequatur, iusto explicabo facere tempore porro et molestias reiciendis modi consequuntur incidunt ex error totam! Reiciendis, nesciunt odit. Eius suscipit modi voluptatum consectetur ipsum et nemo beatae, labore obcaecati, expedita optio esse deleniti quae reiciendis, iusto facilis animi? Minima quidem nobis cum sequi expedita. Placeat laboriosam consequatur provident autem amet aliquam mollitia quas deserunt, laudantium tenetur dolorum maxime iure, repellat natus reiciendis incidunt fuga eos! Accusamus ducimus est provident fuga perspiciatis.";
 	return (
 		<div
 			id="slider-disable"
-			className=" border-2 grid grid-cols-2  w-full gap-4 p-4 border-black  text-justify ">
+			className=" grid grid-cols-4  w-full gap-4 p-4 border-black  text-justify ">
 			{/* Card 1 */}
 			<div
 				onClick={() => {
@@ -88,7 +85,9 @@ const Newscard = ({ props }) => {
 			{/* Card 2 */}
 			<div
 				id="slider-disable"
-				onClick={() => handlecard1("Breaking News")}
+				onClick={() => {
+					navigate("/card2");
+				}}
 				className={`bg-white p-4 border font-serif border-gray-300 rounded-lg shadow-md overflow-auto`}>
 				<div className="header text-center mb-2">
 					<h1 className="new-arrival text-xl font-bold">
@@ -140,7 +139,9 @@ const Newscard = ({ props }) => {
 			{/* Card 3 */}
 			<div
 				id="slider-disable"
-				onClick={() => handlecard1("Sports")}
+				onClick={() => {
+					navigate("/card3");
+				}}
 				className="text-md font-thin text-justify tracking-tight border border-gray-300 rounded-lg shadow-md overflow-auto">
 				<div className=" flex justify-between items-center px-4 py-2">
 					<div className="text-sm">{date || "02 FEBRUARY, 2026"}</div>
@@ -194,7 +195,9 @@ const Newscard = ({ props }) => {
 			{/* Card 4 */}
 			<div
 				id="slider-disable"
-				onClick={() => handlecard1("Nature")}
+				onClick={() => {
+					navigate("/card4");
+				}}
 				className="bg-white p-4 border border-gray-300 overflow-auto">
 				<div className="flex justify-between items-center mb-4">
 					<span>{date || "21 August, 2025"}</span>
