@@ -65,7 +65,7 @@ const Card2 = () => {
 		<div className="mt-4 p-4 flex flex-col items-center justify-center rounded bg-gray-100">
 			<div
 				id="pdf-card"
-				className="p-4 border border-2"
+				className="p-4 border-2"
 				style={{
 					width: "210mm", // A4 width
 					height: "297mm", // A4 height
