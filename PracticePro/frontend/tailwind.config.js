@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      spacing: {
+        'word-spacing': '0.25em', // Add your desired word spacing value
+      },
+    },
   },
   plugins: [],
 }

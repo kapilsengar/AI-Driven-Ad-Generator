@@ -1,0 +1,8 @@
+#slider-disable {
+    overflow: scroll; /* Allow scrolling */
+    scrollbar-width: none; 
+}
+
+#slider-disable::-webkit-scrollbar {
+    display: none; 
+}
